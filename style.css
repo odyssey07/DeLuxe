@@ -1,0 +1,222 @@
+@font-face {
+    font-family: 'raleway';
+    src: url('./Raleway.ttf');
+}
+
+* {
+    font-family: raleway;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+header {
+    margin: 0 15%;
+    padding-top: 8px;
+    min-height: 216px;
+    height: 24vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    justify-items: center;
+}
+
+header h3, header .nav {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+header .group {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+header .group img {
+    width: 50px;
+}
+
+header a:first-child {
+    position: relative;
+    left: 11rem;
+}
+
+header a:nth-child(3) {
+    position: relative;
+    right: 11rem;
+}
+
+header .nav {
+    width: 200px;
+    display: grid;
+    place-items: center;
+    height: 30px;
+    padding: 10px 0;
+    border-radius: 2rem;
+    background-color: white;
+    border: 2px solid black;
+    text-align: center;
+    transition: background-color 150ms ease-in, color 150ms, border-color 150ms;
+}
+
+header > * {cursor: pointer;}
+
+header .nav#deluxe {
+    color:rgb(251, 185, 41);
+    border-color: rgb(251, 185, 41);
+}
+
+header .nav:not(#deluxe):hover {
+    background-color: black;
+    color: white;
+}
+
+header .nav#deluxe:hover {
+    background-color: rgb(251, 185, 41);
+    color: white;
+}
+
+header .group {
+    transition: transform 100ms linear;
+}
+
+header .group:hover {
+    transform: scale(1.03, 1.03);
+}
+
+header a:not(.group, .nav) {
+    grid-column: 2 / 4;
+}
+
+header a:not(.group) img {
+    transition: transform 100ms linear;
+    width: 120px;
+}
+
+header a:not(.group) img:hover {
+    transform: scale(1.05, 1.05);
+}
+
+section#sliders {
+    height: 76vh;
+    background-image: url(slider.jpg);
+}
+
+section#locations {
+    background-color: #f6f6f6;
+    display: flex;
+    margin: 0 20%;
+    margin-top: 40px;
+    border-radius: 1rem;
+    justify-content: center;
+    column-gap: 200px;
+    padding: 20px 0;
+    align-items: center;
+}
+
+section#locations img {
+    width: 200px;
+}
+
+section#locations div h3 {
+    font-size: 2rem;
+}
+
+section#locations div p {
+    font-size: 1rem;
+    margin-top: 5px;
+    font-style: italic;
+    color:#626262;
+}
+
+section#locations div div input {
+    font-size: 1.1rem;
+    padding: .7rem 1rem;
+    width: 400px;
+    outline: none;
+    border: 0;
+    border-radius: .5rem;
+    border: 2px solid white;
+    margin-top: 30px;
+}
+
+section#locations div div input:focus {
+    box-shadow: 2px 2px 10px rgba(37, 37, 37, 0.341);
+}
+
+section#news {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 30px;
+    justify-items: center;
+    margin: 0 18%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+section#news .news {
+    width: 350px;
+    /* border: 2px solid black; */
+}
+
+section#news .news > * {
+    margin-top: 10px;
+}
+
+section#news .news img {
+    width: 350px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 1.5rem;
+    cursor: pointer;
+
+    transition: filter 100ms, box-shadow 100ms;
+}
+
+section#news .news img:hover  {
+    filter: brightness(115%);
+    box-shadow: 7px 7px 6px rgba(37, 37, 37, 0.341);
+}
+
+footer {
+    position: relative;
+    margin-bottom: 150px;
+}
+
+footer .startFooter {
+    display: flex;
+}
+
+footer .screenDivider {
+    width: 50%;
+}
+
+footer .footerLogos {
+    display: flex;
+    margin: 0 5%;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 170px;
+    width: 90%;
+}
+
+footer .footerLogos .words {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+}
+
+footer .socialLogos img{
+    height: 40px;
+}
+
+footer .footerLogos > img {
+    height: 200px;
+}
